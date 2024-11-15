@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HB OS PC</title>
+</head>
+<body>
+  <div id="start">
+    <h1>Hb os</h1>
+    <kn >A os created on html</kn>
+    <br>
+    <button > linguage</button>
+    <br>
+    <input type="checkbox" name="termos de uso" id="tu"> termos de uso
+    
+   <button onclick="part2()">start</button>
+  </div>
+  <div id="ac">
+    <accept >por favor aceite nossos termos de uso antes de continuar...</accept>
+ </div>
+  
+</body>
+<style>
+  #start{
+    transition: 1s;
+    text-align: center;
+    opacity:1;
+   background-Color: gray;
+  }
+  .buttons {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  #ac {
+    opacity: 0;
+    transition: opacity 1s;
+    padding: 2px;
+   
+   background-color: red;
+   outline-color: darkred;
+  }
+  body {
+    transition: 1s;
+    background-color: white;
+    color: white;
+  }
+
+</style>
+
+<script>
+function wait(ms) {
+  return new Promise(resolve => setTimeout(resolve,ms));
+}
+async function part2() {
+   
+  const ac = document.getElementById("ac");
+  const tun = document.getElementById("tu");
+  const sta = document.getElementById("start");
+ const body = document.body
+
+  if (tun.checked) {
+  ac.style.opacity = 0;
+
+ sta.style.opacity = 0;
+  body.style.backgroundColor = "purple";
+ await wait(2000)
+window.open("hbos.html")
+
+  
+  } else {
+    ac.style.opacity = 1;
+  }
+  
+  
+  }
+</script>
+
+
+</html>
